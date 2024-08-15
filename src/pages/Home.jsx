@@ -8,7 +8,7 @@ import proyek4 from "../assets/images/wayang-4.jpeg";
 
 const Home = () => {
   return (
-    <div className="homepage pb-10">
+    <div className="homepage pb-10 ">
       <div className="container mx-auto px-4 ">
         <div className="hero grid md:grid-cols-2 grid-cols-1 items-center gap-20 pt-24">
           <div className="box">
@@ -21,7 +21,7 @@ const Home = () => {
               quasi sit exercitationem voluptatem culpa quisquam.
             </p>
             <a
-              href="#"
+              href="#about"
               className=" bg-amber-800 hover:bg-orange-700 text-white shadow rounded-full py-2 px-4 transition-all"
             >
               Tentang Kami <i className="ri-eye-line ms-1"></i>
@@ -45,12 +45,11 @@ const Home = () => {
             />
           </div>
           <div className="box md:order-2 order-1">
-            <h1 className="lg:text-5xl/tight text-3xl font-medium mb-7">
-              Mengenal Budaya Wayang Kulit Bersama <span className=" text-amber-800 underline">Pesona Wayang</span>
+            <h1 className="lg:text-5xl/tight text-3xl font-bold mb-7">ABOUT<br /><span className=" text-amber-800 underline font-medium">Pesona Wayang</span>
             </h1>
             <p className="text-base/loose">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam,
-              quasi sit exercitationem voluptatem culpa quisquam.
+              quasi sit exercitationem voluptatem culpa quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum vel accusamus sed eos repudiandae fuga atque quis vitae nemo?
             </p>
           </div>
         </div>
@@ -108,22 +107,22 @@ const Home = () => {
           <div className="proyek-box grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 pt-8 gap-6">
             <div className="box bg-white shadow p-2">
               <img src={proyek1} alt="" className="w-full h-[320px]"/>
-              <h1 className="text-xl font-bold mt-6 mb-2">proyek 1</h1>
+              <h1 className="text-xl font-bold mt-6 mb-2">proyek name</h1>
               <p className="text-base/loose">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, dolores.</p>
             </div>
             <div className="box bg-white shadow p-2">
               <img src={proyek2} alt="" className="w-full h-[320px]"/>
-              <h1 className="text-xl font-bold mt-6 mb-2">proyek 1</h1>
+              <h1 className="text-xl font-bold mt-6 mb-2">proyek name</h1>
               <p className="text-base/loose">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, dolores.</p>
             </div>
             <div className="box bg-white shadow p-2">
               <img src={proyek3} alt="" className="w-full h-[320px]"/>
-              <h1 className="text-xl font-bold mt-6 mb-2">proyek 1</h1>
+              <h1 className="text-xl font-bold mt-6 mb-2">proyek name</h1>
               <p className="text-base/loose">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, dolores.</p>
             </div>
             <div className="box bg-white shadow p-2">
               <img src={proyek4} alt="" className="w-full h-[320px]"/>
-              <h1 className="text-xl font-bold mt-6 mb-2">proyek 1</h1>
+              <h1 className="text-xl font-bold mt-6 mb-2">proyek name</h1>
               <p className="text-base/loose">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, dolores.</p>
             </div>
           </div>

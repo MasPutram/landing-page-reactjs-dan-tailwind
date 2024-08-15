@@ -2,9 +2,316 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@layer base{
-    html {
-        font-family: "Poppins", sans-serif;
-    }
+@layer base {
+  html {
+    font-family: "Poppins", sans-serif;
+  }
 }
+
+@layer components {
+  .navbar {
+    position: relative; /* atau fixed jika Anda ingin navbar tetap di atas saat di-scroll */
+    z-index: 10; /* Pastikan nilai ini lebih tinggi dari elemen lain */
+  }
+
+  .box {
+    position: relative;
+  }
+
+  .box-brown {
+    width: 100%;
+    height: 100vh;
+    background-color: #854d0e;
+    animation: slideDown 1.5s ease-in-out,
+      resetBorder 3s ease-in-out 5.4s forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 11rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    opacity: 0;
+    animation: textAppear 1s ease-in-out 8.5s forwards;
+  }
+
+  .box-brown img {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out 1s forwards,
+      resetImg 3s ease-in-out 5s forwards;
+    z-index: 2;
+  }
+
+  .box-brown h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    opacity: 0;
+    position: relative;
+    animation: slideh1 0.9s ease-in-out 1.3s forwards,
+      reseth1 2s ease-in-out 3.5s forwards;
+    z-index: 1;
+  }
+
+  @keyframes slideDown {
+    0% {
+      border-bottom-left-radius: 100%;
+      border-bottom-right-radius: 100%;
+      transform: translateY(-100%);
+    }
+    50% {
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      transform: translateY(-2%);
+    }
+    100% {
+      border-bottom-left-radius: 0%;
+      border-bottom-right-radius: 0%;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      width: 10%;
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      width: 10%;
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideh1 {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes resetBorder {
+    0% {
+      width: 100%;
+      height: 100vh;
+      border-bottom-left-radius: 0%;
+      border-bottom-right-radius: 0%;
+      transform: translateY(0) translateX(0);
+    }
+
+    55% {
+      width: 5%;
+      height: 10vh;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      transform: translateY(calc(90vh - 5vh)) translateX(calc(50vw - 5vh));
+    }
+
+    95% {
+      width: 5%;
+      height: 10vh;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      transform: translateY(calc(90vh - 0vh)) translateX(calc(50vw - 5vh));
+    }
+
+    100% {
+      width: 5%;
+      height: 10vh;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      transform: translateY(calc(90vh - 50vh)) translateX(calc(50vw - 5vh));
+    }
+  }
+
+  @keyframes resetImg {
+    0% {
+      width: 10%;
+      transform: translateY(0) translateX(0);
+    }
+
+    50% {
+      width: 25%;
+      transform: translateY(0) translateX(0);
+    }
+
+    100% {
+      width: 60%;
+      transform: translateY(calc(100vh - 97vh)) translateX(calc(50vw - 100.4vh));
+    }
+  }
+
+  @keyframes reseth1 {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-200%);
+    }
+  }
+
+  @keyframes textAppear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+/* BOX WAYANG BOX WAYANGBOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG */
+/* BOX WAYANG BOX WAYANGBOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG */
+/* BOX WAYANG BOX WAYANGBOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG */
+/* BOX WAYANG BOX WAYANGBOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG */
+/* BOX WAYANG BOX WAYANGBOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG */
+/* BOX WAYANG BOX WAYANGBOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG BOX WAYANG */
+
+/* JELEK JANGAN DIPAKE CUMAN BUAT GAMBARAN */
+
+/* @layer components {
+  .content {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    visibility: hidden; 
+    animation: contentAppear 1s ease-in-out 5.5s forwards; 
+  }
+
+  .box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+  }
+
+  .text {
+    display: inline;
+    margin-bottom: 100px; 
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000000;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0;
+    animation: textAppear 1s ease-in-out 8.8s forwards;
+  }
+
+  .box-gatot,
+  .box-antasena {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    margin: 0 0px;
+    animation: boxAppear 1.5s ease-in-out 8.5s forwards; 
+  }
+
+  .box-antasena .antasena {
+    width: 255px; 
+    height: auto;
+    animation: antasenaMove 3s infinite alternate; 
+  }
+
+  .box-gatot .gatot {
+    width: 285px; 
+    height: auto;
+    animation: gatotMove 3s infinite alternate;
+  }
+
+  .box-antasena h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    white-space: nowrap;
+    margin-top: 30px; 
+  }
+
+  .box-gatot h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+    margin-top: 40px; 
+  }
+}
+
+@keyframes contentAppear {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes boxAppear {
+  0% {
+    opacity: 0;
+    margin: 0 -400px;
+  }
+
+  70% {
+    opacity: 1;
+    margin: 0 -100px;
+  }
+
+  90% {
+    opacity: 1;
+    margin: 0 100px;
+  }
+
+  100% {
+    opacity: 1;
+    margin: 0 200px;
+  }
+}
+
+@keyframes gatotMove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px); 
+  }
+}
+
+@keyframes antasenaMove {
+  0% {
+    transform: translateY(0);
+    transform: scale(1.1);
+  }
+  100% {
+    transform: translateY(-20px);
+    transform: scale(1); 
+  }
+}
+
+@keyframes textAppear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 2;
+  }
+} */
